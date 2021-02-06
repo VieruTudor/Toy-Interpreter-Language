@@ -7,6 +7,7 @@ Toy Language Interpreter for the Advanced Programming Methods course.
 	* Expressions : Arithmetic, Logic, Relational, Value, Variable and Heap Expressions
 	* Statements : Assignment, Compound, If, For, Print, No Operation, Print, Variable Declaration, While
 	* "Advanced" Statements : Heap (Read, Write, New), Lock (Create, Lock, Unlock)
-	* Program State
+	* Program States
+  * Command Line Interface
   * Graphical User Interface made with JavaFX
  
