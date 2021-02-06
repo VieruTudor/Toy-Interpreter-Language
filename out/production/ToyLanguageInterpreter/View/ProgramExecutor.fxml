@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="787.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="603.0" prefWidth="787.0" style="-fx-background-color: -fx-base;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.ProgramExecutorController">
+    <top>
+        <TextField fx:id="numberOfPrgStates" alignment="CENTER" editable="false" promptText="No. program states" style="-fx-background-color: -fx-base; -fx-text-fill: #06a0ba;" text="No. program states" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Microsoft YaHei Light" size="18.0" />
+            </font>
+        </TextField>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="678.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="5.0" />
+            </BorderPane.margin>
+            <Label fx:id="symbolTableText" layoutX="123.0" layoutY="228.0" text="SymbolTable" textAlignment="CENTER" textFill="#06a0ba">
+                <font>
+                    <Font name="Microsoft YaHei Light" size="14.0" />
+                </font>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </Label>
+            <TableView fx:id="symbolTable" prefHeight="200.0" prefWidth="200.0" style="-fx-text-fill: #16213e;">
+                <columns>
+                    <TableColumn fx:id="variableName" prefWidth="205.60003978013992" text="Variable Name" />
+                    <TableColumn fx:id="variableValue" prefWidth="180.8000030517578" text="Value" />
+                </columns>
+                <effect>
+                    <Blend />
+                </effect>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </TableView>
+            <Label fx:id="executionStackText" text="ExecutionStack" textAlignment="CENTER" textFill="#06a0ba">
+                <font>
+                    <Font name="Microsoft YaHei Light" size="14.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </Label>
+            <ListView fx:id="executionStack" prefHeight="200.0" prefWidth="339.0">
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+        </ListView>
+            <Label text="Heap" textAlignment="CENTER" textFill="#06a0ba">
+                <font>
+                    <Font name="Microsoft YaHei Light" size="14.0" />
+                </font>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </Label>
+            <TableView fx:id="heap" prefHeight="200.0" prefWidth="200.0">
+                <columns>
+                    <TableColumn fx:id="addressHeap" prefWidth="200.79991751909256" text="Address" />
+                    <TableColumn fx:id="valueHeap" prefWidth="170.4001007080078" text="Value" />
+                </columns>
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin>
+            </TableView>
+        </VBox>
+    </left>
+    <right>
+        <VBox alignment="TOP_CENTER" prefHeight="678.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="188.0" layoutY="10.0" text="FileTable" textAlignment="CENTER" textFill="#06a0ba">
+                    <font>
+                        <Font name="Microsoft YaHei Light" size="14.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+                </Label>
+                <ListView fx:id="fileTable" prefHeight="200.0" prefWidth="323.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ListView>
+                <Label layoutX="168.0" layoutY="228.0" text="Program Identifiers" textAlignment="CENTER" textFill="#06a0ba">
+                    <font>
+                        <Font name="Microsoft YaHei Light" size="14.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+                </Label>
+                <ListView fx:id="programIdentifiers" layoutX="10.0" layoutY="245.0" prefHeight="200.0" prefWidth="323.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ListView>
+                <Label text="Output" textAlignment="CENTER" textFill="#06a0ba">
+                    <font>
+                        <Font name="Microsoft YaHei Light" size="14.0" />
+                    </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+                </Label>
+                <ListView fx:id="output" prefHeight="200.0" prefWidth="323.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ListView>
+            </children>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin>
+        </VBox>
+    </right>
+    <bottom>
+        <Button fx:id="runButton" mnemonicParsing="false" onAction="#runOneStep" text="Run One Step" textAlignment="CENTER" textFill="#1887c7" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="14.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>
