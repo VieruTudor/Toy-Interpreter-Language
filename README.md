@@ -1,6 +1,6 @@
 # Toy-Language-Interpreter
 
-Toy Language Interpreter for Advanced Programming Methods course.
+Toy Language Interpreter for the Advanced Programming Methods course.
 * It includes : 
 	* Types : Bool, Int, String, Reference
 	* Values : Bool, Int, String, Reference
