@@ -2,10 +2,11 @@
 
 Toy Language Interpreter for Advanced Programming Methods course.
 * It includes : 
-	* Types : Bool, Int
-	* Values : Bool, Int
-	* Expressions : Arithmetic, Logic, Value and Variable
-	* Statements : Assignment, Compound, If, Print, No Operation, Print, Variable Declaration
+	* Types : Bool, Int, String, Reference
+	* Values : Bool, Int, String, Reference
+	* Expressions : Arithmetic, Logic, Relational, Value, Variable and Heap Expressions
+	* Statements : Assignment, Compound, If, For, Print, No Operation, Print, Variable Declaration, While
+	* "Advanced" Statements : Heap (Read, Write, New), Lock (Create, Lock, Unlock)
 	* Program State
   * Graphical User Interface made with JavaFX
  
